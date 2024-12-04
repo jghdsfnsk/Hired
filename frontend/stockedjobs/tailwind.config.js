@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-// tailwind.config.js
 module.exports = {
   content: [
     "./index.html",
@@ -10,8 +9,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('@tailwindcss/typography')
-  ],  
+    require('@tailwindcss/typography'),
+  ],
 };
-
-
