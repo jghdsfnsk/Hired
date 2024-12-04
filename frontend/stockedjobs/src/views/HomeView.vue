@@ -1,7 +1,10 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <p class="text-amber-600">Home</p>
+    <section>
+      <div class="container">
+        <h1>Stocked Jobs</h1>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -11,8 +14,5 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
-  }
 }
 </script>
