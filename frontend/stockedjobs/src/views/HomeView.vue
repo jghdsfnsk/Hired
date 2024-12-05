@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <section>
-      <div class="container">
-        <h1>Stocked Jobs</h1>
-      </div>
-    </section>
+    <h1>This is the home page</h1>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import JobCard from '@/components/JobCard.vue'
+import axios from 'axios'
 export default {
   name: 'HomeView',
+  components: {
+    JobCard
+  },
+  data() {
+    return {}
+  },
+  mounted(){
+    document.title = "Home | Stocked Jobs"
+  }
 }
 </script>
