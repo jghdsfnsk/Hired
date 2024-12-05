@@ -21,5 +21,5 @@ class JobSerializer(serializers.ModelSerializer):
             'city', 
             'state', 
             'created_on', 
-            'slug'
+            'get_absolute_url'
             ]

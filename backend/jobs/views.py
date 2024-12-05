@@ -9,3 +9,9 @@ class AllJobsList(APIView):
         jobs = Job.objects.all()
         serializer = JobSerializer(jobs, many=True)
         return Response(serializer.data)
+
+class TopSalaryJobs(APIView):
+    def get(self, request, format=None):
+        jobs = Job.objects.all().order_by('-salary')[:3]
+        serializer = JobSerializer(jobs, many=True)
+        return Response(serializer.data)
