@@ -11,7 +11,7 @@
             <div class="flex space-x-4">
               <router-link to="/" class=" text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</router-link>
               <router-link to="/about" class="text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">About</router-link>
-              <router-link to="/jobs" class="text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Jobs</router-link>
+              <!-- <router-link to="/jobs" class="text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Jobs</router-link> -->
             </div>
           </div>
         </div>
@@ -27,11 +27,14 @@
       </div>
     </div>
   </Disclosure>
-
-  <section class="section">
+  
+  <section class="w-full mx-auto bg-indigo-950 min-h-screen">
       <router-view/>
     </section>
-    
+  
+  <footer>
+    <p class="text-center bg-indigo-950 text-white text-3m">Copyright (c) 2024</p>
+  </footer>
   </div>
   
 </template>
