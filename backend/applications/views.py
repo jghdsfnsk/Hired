@@ -21,3 +21,9 @@ class AllApplicationsbyUser(APIView):
         applications = Application.objects.filter(user__username=username)
         serializer = ApplicationSerializer(applications, many=True)
         return Response(serializer.data)
+
+class ApplicationDetail(APIView):
+    def get(self, request,username,job_slug,application_id, format=None):
+        application = Application.objects.get(id=application_id)
+        serializer = ApplicationSerializer(application)
+        return Response(serializer.data)
