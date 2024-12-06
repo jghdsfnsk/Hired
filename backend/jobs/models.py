@@ -4,7 +4,8 @@ from django.contrib.auth.models import User
 class Job(models.Model):
     owner = models.ForeignKey(User, related_name='jobs', on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=100)
-    description = models.TextField()
+    fulldescription = models.TextField()
+    summary = models.CharField(max_length=100)
     salary = models.DecimalField(max_digits=10, decimal_places=2)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=2)
