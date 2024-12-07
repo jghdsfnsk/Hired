@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <section>
+    <section class="mb-10">
       <div class="flex flex-col items-center justify-center">
         <div class="bg-sky-950 text-center">
           <h1 class="text-6xl text-white font-bold">Welcome to Stocked Jobs</h1>
@@ -8,16 +8,14 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="flex flex-col items-center justify-center mt-10">
-        <div class=" text-center">
-          <h1 class="text-4xl text-white font-bold">Top Jobs by Yearly Salary</h1>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <JobCard v-for="job in jobs" :key="job.id" :job="job"/>
-          </div>
+    <div class="container">
+      <div class="text-center">
+        <h1 class="text-4xl text-white font-bold">Top Jobs by Yearly Salary</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 ml-20">
+          <JobCard v-for="job in jobs" :key="job.id" :job="job"/>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 

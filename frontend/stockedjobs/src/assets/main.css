@@ -749,6 +749,40 @@ select {
   outline: 1px auto -webkit-focus-ring-color;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .absolute {
   position: absolute;
 }
@@ -762,14 +796,6 @@ select {
   bottom: 0px;
 }
 
-.right-0 {
-  right: 0px;
-}
-
-.top-0 {
-  top: 0px;
-}
-
 .bottom-0 {
   bottom: 0px;
 }
@@ -778,25 +804,41 @@ select {
   left: 0px;
 }
 
+.right-0 {
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.ml-20 {
+  margin-left: 5rem;
 }
 
 .ml-3 {
   margin-left: 0.75rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .flex {
@@ -819,6 +861,10 @@ select {
   height: 2rem;
 }
 
+.h-40 {
+  height: 10rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -827,8 +873,8 @@ select {
   width: auto;
 }
 
-.w-full {
-  width: 100%;
+.w-40 {
+  width: 10rem;
 }
 
 .max-w-7xl {
@@ -877,6 +923,14 @@ select {
   border-radius: 0.375rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
@@ -890,6 +944,11 @@ select {
 .bg-sky-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(8 47 73 / var(--tw-bg-opacity, 1));
+}
+
+.object-left {
+  -o-object-position: left;
+     object-position: left;
 }
 
 .p-11 {
@@ -914,6 +973,11 @@ select {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .py-4 {
@@ -950,12 +1014,26 @@ select {
   line-height: 1.75rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
 .font-medium {
   font-weight: 500;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .text-amber-50 {
@@ -968,7 +1046,25 @@ select {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
 .hover\:bg-sky-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 165 233 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-sky-950:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 47 73 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.active\:bg-sky-500:active {
   --tw-bg-opacity: 1;
   background-color: rgb(14 165 233 / var(--tw-bg-opacity, 1));
 }

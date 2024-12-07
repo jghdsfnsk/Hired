@@ -11,16 +11,16 @@
             <div class="flex space-x-4">
               <router-link to="/" class=" text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</router-link>
               <router-link to="/about" class="text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">About</router-link>
-              <!-- <router-link to="/jobs" class="text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Jobs</router-link> -->
+              <router-link to="/jobs" class="text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Jobs</router-link>
             </div>
           </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center">
           <div class="p-11">
-            <button type="button" class="text-amber-50 bg-sky-950 px-10 py-4 text-2xl hover:bg-sky-500">Login</button>
+            <button type="button" class="text-amber-50 px-10 py-4 text-2xl bg-gray-850 hover:bg-sky-950 active:bg-sky-500 ">Login</button>
           </div>
           <div class="p-11">
-          <button type="button" class="text-amber-50 bg-sky-950 ml-3 px-10 py-4 text-2xl hover:bg-sky-500">Applications</button>
+          <button type="button" class="text-amber-50 bg-gray-850 ml-3 px-10 py-4 text-2xl hover:bg-sky-950 active:bg-sky-500 ">Applications</button>
           </div>
           
         </div>
@@ -28,7 +28,7 @@
     </div>
   </Disclosure>
   
-  <section class="w-full mx-auto bg-indigo-950 min-h-screen">
+  <section class="bg-indigo-950 min-h-screen">
       <router-view/>
     </section>
   

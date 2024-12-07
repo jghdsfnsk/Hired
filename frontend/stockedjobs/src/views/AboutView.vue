@@ -1,6 +1,14 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <div class="text-center">
+      <h1 class="text-white font-bold underline text-5xl uppercase">Ezekiel</h1>
+      <p class="text-white text-3m">Sole developer of this website</p>
+    </div>
+
+    <figure>
+      <img :src="require('@/assets/Profile.jpg')" alt="Ezekiel" class="rounded-full h-40 w-40 mx-auto" />
+      <figcaption class="text-center text-white text-2m">"All for English Class" -Ezekiel</figcaption>
+    </figure>
   </div>
 </template>
 
