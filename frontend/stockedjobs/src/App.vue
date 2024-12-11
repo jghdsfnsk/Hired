@@ -17,7 +17,7 @@
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center">
           <div class="p-11">
-            <button type="button" class="text-amber-50 px-10 py-4 text-2xl bg-gray-850 hover:bg-sky-950 active:bg-sky-500 ">Login</button>
+            <button type="button" class="text-amber-50 px-10 py-4 text-2xl bg-gray-850 hover:bg-sky-950 active:bg-sky-500 "><router-link to="/log-in" aria-current="page">Login</router-link></button>
           </div>
           <div class="p-11">
           <button type="button" class="text-amber-50 bg-gray-850 ml-3 px-10 py-4 text-2xl hover:bg-sky-950 active:bg-sky-500 ">Applications</button>
@@ -41,4 +41,20 @@
 
 <script setup>
 import { Disclosure} from '@headlessui/vue'
+</script>
+
+<script>
+import axios from 'axios'
+export default {
+  beforeCreate() {
+    this.$store.commit("getUserState")
+    const token = this.$store.state.token
+
+    if (token) {
+      axios.defaults.headers.common["Authorization"] = "Token" + token
+    } else {
+      axios.defaults.headers.common["Authorization"] = ''
+    }
+  }
+}
 </script>
