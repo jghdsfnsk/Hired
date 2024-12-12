@@ -17,7 +17,13 @@
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center">
           <div class="p-11">
+            <template v-if="!$store.state.isAuthenticated">
             <button type="button" class="text-amber-50 px-10 py-4 text-2xl bg-gray-850 hover:bg-sky-950 active:bg-sky-500 "><router-link to="/log-in" aria-current="page">Login</router-link></button>
+            </template>
+
+            <template v-else>
+            <button type="button" class="text-amber-50 px-10 py-4 text-2xl bg-gray-850 hover:bg-sky-950 active:bg-sky-500 "><router-link to="/log-in" aria-current="page">Account</router-link></button>
+            </template>
           </div>
           <div class="p-11">
           <button type="button" class="text-amber-50 bg-gray-850 ml-3 px-10 py-4 text-2xl hover:bg-sky-950 active:bg-sky-500 ">Applications</button>

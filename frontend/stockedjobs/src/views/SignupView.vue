@@ -58,7 +58,40 @@ export default {
         document.title = "Sign Up | Stocked Jobs"
     },
     methods: {
-        submitForm(){}
+        submitForm(){
+            this.errors = []
+            if(this.username === ''){
+                this.errors.push('Username is required')
+            }
+            if(this.password === ''){
+                this.errors.push('Password is required')
+            }
+            if(this.email === ''){
+                this.errors.push('Email is required')
+            }
+            if(this.password !== this.password2){
+                this.errors.push('Passwords do not match')
+            }
+            if(this.errors.length === 0){
+                const formData = {
+                    username: this.username,
+                    password: this.password,
+                    email: this.email
+                }
+                axios.post('/api/v1/users/',formData)
+                .then(response => {
+                    this.$router.push('/log-in')
+                }).catch(error => {
+                    if (error.response) {
+                        for (const property in error.response.data) {
+                            this.errors.push(`${property}: ${error.response.data[property]}`)
+                        }
+                    } else {
+                        this.errors.push('An error occurred. Please try again.')
+                    }
+                })
+            }
+        }
     }
 }
 </script>

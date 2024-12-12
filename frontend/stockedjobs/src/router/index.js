@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView.vue'
 import JobsView from '../views/JobsView.vue'
 import LoginView from '../views/LoginView.vue'
 import SignUpView from '../views/SignupView.vue'
+import JobDetailView from '../views/JobDetailView.vue'
 
 const routes = [
   {
@@ -20,6 +21,11 @@ const routes = [
     path: '/jobs',
     name: 'jobs',
     component: JobsView
+  },
+  {
+    path: '/:username/:job_slug',
+    name: 'jobsdetail',
+    component: JobDetailView
   },
   {
     path: '/log-in',
