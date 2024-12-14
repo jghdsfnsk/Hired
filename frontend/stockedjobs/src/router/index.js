@@ -5,6 +5,7 @@ import JobsView from '../views/JobsView.vue'
 import LoginView from '../views/LoginView.vue'
 import SignUpView from '../views/SignupView.vue'
 import JobDetailView from '../views/JobDetailView.vue'
+import JobApplyView from '../views/JobApplyView.vue'
 
 const routes = [
   {
@@ -28,6 +29,14 @@ const routes = [
     component: JobDetailView
   },
   {
+    path: '/:username/:job_slug/apply',
+    name: 'jobapply',
+    component: JobApplyView,
+    meta: {
+      requireLogin: true
+    }
+  },
+  {
     path: '/log-in',
     name: 'login',
     component: LoginView
@@ -43,5 +52,14 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.requireLogin && !localStorage.getItem('token')) {
+    next({ name: 'login', query: {to: to.path} })
+  } else {
+    next()
+  }
+})
+
 
 export default router

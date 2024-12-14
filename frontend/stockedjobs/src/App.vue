@@ -22,7 +22,7 @@
             </template>
 
             <template v-else>
-            <button type="button" class="text-amber-50 px-10 py-4 text-2xl bg-gray-850 hover:bg-sky-950 active:bg-sky-500 "><router-link to="/log-in" aria-current="page">Account</router-link></button>
+            <button type="button" class="text-amber-50 px-10 py-4 text-2xl bg-red-850 hover:bg-red-950 active:bg-red-500 " @click="logout">Logout</button>
             </template>
           </div>
           <div class="p-11">
@@ -60,6 +60,13 @@ export default {
       axios.defaults.headers.common["Authorization"] = "Token" + token
     } else {
       axios.defaults.headers.common["Authorization"] = ''
+    }
+  },
+  methods: {
+    logout() {
+      this.$store.commit("removeToken")
+      axios.defaults.headers.common["Authorization"] = ''
+      this.$router.push({name: "home"})
     }
   }
 }

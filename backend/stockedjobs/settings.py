@@ -49,6 +49,12 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8080",
+]
+Access_Control_Allow_Credentials = True
+
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
